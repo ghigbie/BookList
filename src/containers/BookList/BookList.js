@@ -6,7 +6,7 @@ class BookList extends Component{
     renderList(){
         this.props.books.map((book) => {
             return (
-                <li key={bok.title}
+                <li key={book.title}
                     className="list-group-item">{book.title}</li>
             );
         });
@@ -20,3 +20,10 @@ class BookList extends Component{
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return{
+        books: state.books
+    };
+};
+
